@@ -1,0 +1,17 @@
+<% include partitials/header.ejs %>
+
+<div class="container">
+<h1 style="text-align:center;"> Edit <%= blog.title%></h1>
+<br>
+</div>
+<form style="text-align: center;" class="container form-group" action="/blogku/<%= blog._id%>?_method=PUT" method="POST">
+  <input class="form-control" type="text" name="blog[title]" placeholder="title" value="<%= blog.title%>">
+  <br>
+  <input class="form-control" type="text" name="blog[image]" placeholder="image url" value="<%= blog.image%>">
+  <br>
+  <input class="form-control" type="text" name="blog[description]" placeholder="description" value="<%= blog.description%>">
+  <br>
+  <input class="btn btn-primary" type="submit" name="submit">
+</form>
+
+<% include partitials/footer.ejs %>

@@ -1,0 +1,33 @@
+<% include partitials/header.ejs %>
+
+<!-- /.HEADER-->
+  <div class="container">
+    <header class="jumbotron">
+      <div class="container">
+        <h1>Welcome to my Blog</h1>
+        <br>
+        <p>
+          <a class="btn btn-primary" href="/blogku/new">Add new post</a>
+        </p>
+      </div>
+    </header>
+
+  <div class="row" style="text-align: center; display: flex; flex-wrap: wrap;">
+  <% blogs.forEach(function(blog){ %>
+    <div class="col-md-3 col-sm-6">
+      <p id="prg" align="center"><%= blog.title %></p>
+      <div class="thumbnail">
+        <img src="<%= blog.image%>">
+        <div class="caption">
+          <h4><%= blog.description %></h4>
+        </div>
+        <p>
+          <a class="btn btn-primary" href="/blogku/<%= blog._id%>">More info</a>
+        </p>
+      </div>
+    </div>
+      <% }) %>
+  </div>
+  </div>
+
+  <% include partitials/footer.ejs %>
