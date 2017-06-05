@@ -47,6 +47,16 @@ app.get("/blogku", function(req, res){
   });
 });
 
+//Login Route
+app.get("/blogku/login", function(req, res){
+  res.render("login");
+});
+
+//About Route
+app.get("/blogku/about", function(req, res){
+  res.render("about");
+});
+
 //New Route
 app.get("/blogku/new", function(req, res){
   res.render("new");
